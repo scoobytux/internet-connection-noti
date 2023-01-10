@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ea4d67;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #e3f2fd;
+  display: flex;
+  justify-content: center;
+}
+
+.popup {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  translate: -50% 0;
+
+  background: #fff;
+  width: 500px;
+  border-radius: 5px;
+  padding: 13px 17px 20px;
+  border-top: 3px solid var(--primary-color);
+  box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
+  display: flex;
+}
+
+.popup .icon-col {
+  flex: 1;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.popup .details {
+  flex: 5;
+}
+
+.popup .title {
+  font-size: 18px;
+}
+
+.popup .desc {
+  color: #474747;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.popup .btn-reconnect {
+  border: none;
+  outline: none;
+  padding: 9px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--primary-color);
+}
