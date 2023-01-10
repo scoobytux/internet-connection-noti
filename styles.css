@@ -7,7 +7,8 @@
 }
 
 :root {
-  --primary-color: #ea4d67;
+  --connection-failed-color: #ea4d67;
+  --connection-success-color: #69ff05;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 
 .popup {
   position: absolute;
-  top: 10px;
+  top: -25%;
   left: 50%;
   translate: -50% 0;
 
@@ -27,25 +28,45 @@ body {
   width: 500px;
   border-radius: 5px;
   padding: 13px 17px 20px;
-  border-top: 3px solid var(--primary-color);
   box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
   display: flex;
+  transition: 0.3s all ease;
+}
+
+.popup.success {
+  border-top: 3px solid var(--connection-success-color);
+}
+
+.popup.failed {
+  border-top: 3px solid var(--connection-failed-color);
+}
+
+.popup.show {
+  top: 10px;
 }
 
 .popup .icon-col {
   flex: 1;
 }
 
-.icon {
+i {
   width: 40px;
   height: 40px;
   font-size: 24px;
   border-radius: 50%;
-  background-color: var(--primary-color);
+
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+
+.popup.success i {
+  background-color: var(--connection-success-color);
+}
+
+.popup.failed i {
+  background-color: var(--connection-failed-color);
 }
 
 .popup .details {
@@ -69,5 +90,5 @@ body {
   border-radius: 3px;
   cursor: pointer;
   color: #fff;
-  background-color: var(--primary-color);
+  background-color: #b1b1b1fc;
 }
