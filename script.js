@@ -34,7 +34,7 @@ const handlePopup = isOnline => {
     addPopupContent({
       icon: "uil uil-wifi",
       title: "Connection Restored",
-      desc: "Successfully connected to the Internet",
+      desc: "Successfully connected to the Internet.",
     });
     popup.classList.replace("failed", "success");
     setTimeout(() => {
@@ -52,9 +52,9 @@ const handlePopup = isOnline => {
 
   let timer = 10;
   intervalId = setInterval(() => {
-    getElem(".countdown").innerText = timer--;
+    getElem(".countdown").innerText = --timer;
 
-    if (timer < 0) {
+    if (timer === 0) {
       checkConnection();
     }
   }, 1000);

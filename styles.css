@@ -8,7 +8,7 @@
 
 :root {
   --connection-failed-color: #ea4d67;
-  --connection-success-color: #69ff05;
+  --connection-success-color: #2ecc71;
 }
 
 body {
@@ -24,12 +24,14 @@ body {
   left: 50%;
   translate: -50% 0;
 
+  display: flex;
+
   background: #fff;
   width: 500px;
   border-radius: 5px;
   padding: 13px 17px 20px;
   box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
-  display: flex;
+
   transition: 0.3s all ease;
 }
 
@@ -54,11 +56,11 @@ i {
   height: 40px;
   font-size: 24px;
   border-radius: 50%;
+  color: #fff;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
 
 .popup.success i {
